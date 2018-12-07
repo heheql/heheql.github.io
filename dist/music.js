@@ -10,7 +10,7 @@ const ap = new APlayer({
       },
       {
         name: 'next to you',
-        artist: '',
+        artist: 'Ken Arai',
         url: 'http://www.ytmp3.cn/down/33709.mp3',
       },
     ]
