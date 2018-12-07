@@ -21,6 +21,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
 
+<script>
+    (function(){
+        if(''){
+            if (prompt('请输入文章密码') !== ''){
+                alert('密码错误！');
+                history.back();
+            }
+        }
+    })();
+</script>
 
 
 
@@ -386,10 +396,18 @@
             <div class="tag-cloud-title">
                 
                 
-                暂无标签
+                  
+                    
+                  
+                
+                  
+                    
+                  
+                
+                目前共计 2 个标签
             </div>
             <div class="tag-cloud-tags">
-              
+              <a href="/tags/CCF-CSP/" style="font-size: 12px; color: #ccc">CCF-CSP</a> <a href="/tags/图论/" style="font-size: 12px; color: #ccc">图论</a>
             </div>
           </div>
         
@@ -448,9 +466,46 @@
           
             <nav class="site-state motion-element">
               
-
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">1</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
               
 
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                    <span class="site-state-item-count">1</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
               
             </nav>
           
