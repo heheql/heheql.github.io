@@ -4,14 +4,19 @@ const ap = new APlayer({
     autoplay: false,
     audio: [
       {
-        name: "未闻花名",
+        name: "if",
+        artist: '火影剧场版《失落之塔》',
+        url: 'http://music.163.com/song/media/outer/url?id=809609.mp3',
+      },
+      {
+        name: "secret base",
         artist: '未闻花名',
-        url: 'http://www.ytmp3.cn/down/48499.mp3',
+        url: 'http://music.163.com/song/media/outer/url?id=33911781.mp3',
       },
       {
         name: 'next to you',
-        artist: 'Ken Arai',
-        url: 'http://www.ytmp3.cn/down/33709.mp3',
+        artist: '生命的准则',
+        url: 'http://music.163.com/song/media/outer/url?id=29816800.mp3',
       },
     ]
 });
