@@ -107,27 +107,27 @@
 
 
 
-  <meta name="description" content="此文章受密码保护">
-<meta name="keywords" content="essay">
+  <meta name="description" content="记一次内网穿透实践">
+<meta name="keywords" content="Trick">
 <meta property="og:type" content="article">
-<meta property="og:title" content="忆高考">
-<meta property="og:url" content="https://heheql.github.io.git/2017/06/07/memorizing-cee/index.html">
+<meta property="og:title" content="内网穿透 by Natapp">
+<meta property="og:url" content="https://heheql.github.io.git/2019/12/20/intranet-penetration-by-natapp/index.html">
 <meta property="og:site_name" content="The Blog of QL">
-<meta property="og:description" content="此文章受密码保护">
+<meta property="og:description" content="记一次内网穿透实践">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://blog-1258258097.cos.ap-beijing.myqcloud.com/blogimg/banner2017.png">
-<meta property="og:updated_time" content="2018-12-12T07:52:09.104Z">
+<meta property="og:image" content="https://blog-1258258097.cos.ap-beijing.myqcloud.com/blogimg/natapp.jpg">
+<meta property="og:updated_time" content="2020-01-06T06:20:49.544Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="忆高考">
-<meta name="twitter:description" content="此文章受密码保护">
-<meta name="twitter:image" content="https://blog-1258258097.cos.ap-beijing.myqcloud.com/blogimg/banner2017.png">
+<meta name="twitter:title" content="内网穿透 by Natapp">
+<meta name="twitter:description" content="记一次内网穿透实践">
+<meta name="twitter:image" content="https://blog-1258258097.cos.ap-beijing.myqcloud.com/blogimg/natapp.jpg">
 
 
 
 
 
 
-  <link rel="canonical" href="https://heheql.github.io.git/2017/06/07/memorizing-cee/">
+  <link rel="canonical" href="https://heheql.github.io.git/2019/12/20/intranet-penetration-by-natapp/">
 
 
 
@@ -137,7 +137,7 @@
   };
 </script>
 
-  <title>忆高考 | The Blog of QL</title>
+  <title>内网穿透 by Natapp | The Blog of QL</title>
   
 
 
@@ -362,7 +362,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://heheql.github.io.git/2017/06/07/memorizing-cee/">
+    <link itemprop="mainEntityOfPage" href="https://heheql.github.io.git/2019/12/20/intranet-penetration-by-natapp/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="QL">
@@ -379,7 +379,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">忆高考
+          <h1 class="post-title" itemprop="name headline">内网穿透 by Natapp
               
             
           </h1>
@@ -404,7 +404,7 @@
                 
               
 
-              <time title="创建时间：2017-06-07 18:55:51" itemprop="dateCreated datePublished" datetime="2017-06-07T18:55:51+08:00">2017-06-07</time>
+              <time title="创建时间：2019-12-20 16:36:05" itemprop="dateCreated datePublished" datetime="2019-12-20T16:36:05+08:00">2019-12-20</time>
             
 
             
@@ -430,7 +430,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/随笔/" itemprop="url" rel="index"><span itemprop="name">随笔</span></a></span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Trick/" itemprop="url" rel="index"><span itemprop="name">Trick</span></a></span>
 
                 
                 
@@ -450,7 +450,7 @@
           
 
           
-              <div class="post-description"><center> 此文章受密码保护 </center></div>
+              <div class="post-description"><center> 记一次内网穿透实践 <center></center></center></div>
           
 
         </div>
@@ -468,8 +468,8 @@
           
           
             <div class="post-gallery-row">
-              <a class="post-gallery-img fancybox" href="https://blog-1258258097.cos.ap-beijing.myqcloud.com/blogimg/banner2017.png" rel="gallery_ck521qjyc000gtl9kfq4qyxmc" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
-                <img src="https://blog-1258258097.cos.ap-beijing.myqcloud.com/blogimg/banner2017.png" itemprop="contentUrl">
+              <a class="post-gallery-img fancybox" href="https://blog-1258258097.cos.ap-beijing.myqcloud.com/blogimg/natapp.jpg" rel="gallery_ck521qjyb000etl9k73cht9sm" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
+                <img src="https://blog-1258258097.cos.ap-beijing.myqcloud.com/blogimg/natapp.jpg" itemprop="contentUrl">
               </a>
             
           
@@ -480,20 +480,23 @@
       
 
       
-        <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
-<div id="hbe-security">
-  <div class="hbe-input-container">
-  <input type="password" class="hbe-form-control" id="pass" placeholder="计算<br>gcd(374655767,980417)">
-    <label for="pass">计算<br>gcd(374655767,980417)</label>
-    <div class="bottom-line"></div>
-  </div>
-</div>
-<div id="decryptionError" style="display: none;">Incorrect Password!</div>
-<div id="noContentError" style="display: none;">No content to display!</div>
-<div id="encrypt-blog" style="display:none">
-U2FsdGVkX19qkP4Jy1yv2tv/RSTI9BI07HNskdNzdi1S5mW9HeB6SFSI2II3Y44KxmpWiIOVJttV0qLoNPvWz7Bx7DBAzgAsZTPOrwNe/dDL9xF9XjDL6jre+FpVVZGk+PR/phYYnUsxKfuPrSDT912K2uHJjcpsTXkWmMyBsiMkMSraCFjZf8hd/nVZxMGSg9bE+0sbWvN3hKvVGVWwaj/mhzPU6fvgdDKkgaJe/dqLai+Qf7Uhlys0hXSisaCgbWuyHQstq+k9BqMk9l2W0dhXP3zNVErACndAl4x2xl13LnyZXVfG6A+qdqw1JctMhEw+oImNfujm+c604vNuuToqzUcBVrqtajl2+6gQWR50B0V32eIRhUQB/3qb9pAKHxvl3f9Pk+hS681EWskHxvXb4qRSCitpQLMnWC4BYvRfBwijvS+kaL7ULN60u/6lQFgthl21LMZJV6QE8GPKA3i/GP3CdSkG28+164+pfHvXPudBfSvB4R1iXCEhIZsCvggCiwVGpwnzfFgAwnrpcXG4VaJsSVZx1qnZPCKbSXf7h4HZYsFWK8HxYgwsGUza9pHd+eHnXYYsaQ5EjXqQSxEm7RXFdiSNl74LowV/pJheQbzrnmMM8vZ0xITz+mIZH+2LVmt9JF91gi2xBt1f//dbQOiXxHRW1qsMdH50tR+qca//oSE8zHdsNHPgGunSQOKzDUXEl6jx5htKxtesjrpebsfDfCQ5xyn4T8/zG/S97gza/vsdIhcDVDc2eI0B4hZE2hlQSh/U5RUDxiF5JzN9Z92jMZB8N2tx8733ljPXixae7txtxyBnJMPL1wRSGqIjXdjn2WSWEa1Trg145ktS4BgGOLQru/IwDdEaAkPcPFiBklFdrwpmf4dhjMt/A8ZQXSiYrEHgsBpeGe2MNzgw2QyjNA3VC1jGSZOzTbSOoKFAJ3zyWMFxp5l60Hik0DLaFAJ+q/NA5dUPHP261ffIJfOIejrkDbEuGLT3J2Q4ZvAmuXVkhg05Quj4iz8/49apzJ59xe7xo991HZz5V57zdS6bx1jP08fTGWKSCvQSos/+ZlK9ar97cqgx/oncpra4RruIAimWQtLjqa4FJWFr8q/Ok2jQ2xrRDuqAnaoL19eEoX260+39Je7gYEyycvP2HyTXnWkjiyvjCwBYNDujTKkaiXz2PeQ9roFAabz68w3isM/lBZ+lbXAy9Ym8nfvMftHHq4I++96MksUGvOQPNw8/idid3CTZDNZncD8mqBtU3bncKSEDMunxJppkFNQ9xSAtMnCLqi8MTedde8TR5Q1DvNe7LB8u6qInhypBjOGQU6rwuH0rxNTiaqB1DlsAGkyEWiGGIGttSTFoRlil6KXDxRCcaMviU9NETOUw11Qat7OlscX+wgUsNDfMHOrCSJhp4l7zT10QPTfz4juurPJmjuoMRpdHciE9xqBrRiEiBC6BImOd+mo8+qt6GQiaHW8+duURqyJJlPukvQ==
-</div>
-<script src="/lib/crypto-js.js"></script><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">
+        <h1 id="Natapp内网穿透"><a href="#Natapp内网穿透" class="headerlink" title="Natapp内网穿透"></a>Natapp内网穿透</h1><h2 id="前期准备"><a href="#前期准备" class="headerlink" title="前期准备"></a>前期准备</h2><ul>
+<li>本地主机（内网机器，内网服务器）</li>
+</ul>
+<p><em>Tips:natapp不稳定，端口容易自动变化，但是不需要公网服务器</em></p>
+<h2 id="申请TCP隧道"><a href="#申请TCP隧道" class="headerlink" title="申请TCP隧道"></a>申请TCP隧道</h2><p><img src="https://blog-1258258097.cos.ap-beijing.myqcloud.com/blogimg/natapp_get.jpg" alt="natapp_get"></p>
+<p><img src="https://blog-1258258097.cos.ap-beijing.myqcloud.com/blogimg/natapp_token.jpg" alt="natapp_authtoken"><br>复制authtoken</p>
+<h2 id="具体配置"><a href="#具体配置" class="headerlink" title="具体配置"></a>具体配置</h2><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>wget <span class="symbol">http:</span>/<span class="regexp">/download.natapp.cn/assets</span><span class="regexp">/downloads/clients</span><span class="regexp">/2_3_9/natapp</span>_linux_amd64_2_3_9.zip</span><br><span class="line"><span class="variable">$ </span>unzip natapp_linux_amd64_2_3_9.zip</span><br><span class="line"><span class="variable">$ </span>wget <span class="symbol">http:</span>/<span class="regexp">/download.natapp.cn/assets</span><span class="regexp">/downloads/config</span>.ini</span><br></pre></td></tr></table></figure>
+<p>config.ini内容：<br><figure class="highlight makefile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[default]</span><br><span class="line">authtoken=                      <span class="comment">#对应一条隧道的authtoken</span></span><br><span class="line">clienttoken=                    <span class="comment">#对应客户端的clienttoken,将会忽略authtoken,若无请留空,</span></span><br><span class="line">log=stdout                      <span class="comment">#log 日志文件,可指定本地文件, none=不做记录,stdout=直接屏幕输出 ,默认为none</span></span><br><span class="line">loglevel=INFO                   <span class="comment">#日志等级 DEBUG, INFO, WARNING, ERROR 默认为 DEBUG</span></span><br><span class="line">http_proxy=                     <span class="comment">#代理设置 如 http://10.123.10.10:3128 非代理上网用户请务必留空</span></span><br></pre></td></tr></table></figure></p>
+<p>将authtoken填入,log=stdout,loglevel=INFO,方便后台运行后获得端口</p>
+<h2 id="后台运行"><a href="#后台运行" class="headerlink" title="后台运行"></a>后台运行</h2><figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ nohup ./natapp <span class="meta">&amp;</span></span><br></pre></td></tr></table></figure>
+<p>读取端口<br><figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="keyword">cat</span> nohup.<span class="keyword">out</span></span><br></pre></td></tr></table></figure></p>
+<p>得到登录域名和端口<br><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-attr">[INFO]</span> <span class="selector-attr">[client]</span> <span class="selector-tag">Trusting</span> <span class="selector-tag">root</span> <span class="selector-tag">CAs</span>: <span class="selector-attr">[assets/client/tls/ngrokroot.crt]</span></span><br><span class="line"><span class="selector-attr">[INFO]</span> <span class="selector-attr">[client]</span> <span class="selector-tag">Authenticated</span> <span class="selector-tag">with</span> <span class="selector-tag">server</span>, <span class="selector-tag">client</span> <span class="selector-tag">id</span>: <span class="selector-tag">f37bea3d693aeb86c70ed70b012a047e</span></span><br><span class="line"><span class="selector-attr">[INFO]</span> <span class="selector-attr">[client]</span> <span class="selector-tag">Tunnel</span> <span class="selector-tag">established</span> <span class="selector-tag">at</span> <span class="selector-tag">tcp</span>:<span class="comment">//server.natappfree.cc:42743</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="远程登录"><a href="#远程登录" class="headerlink" title="远程登录"></a>远程登录</h2><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh userName@server<span class="selector-class">.natappfree</span><span class="selector-class">.cc</span> -<span class="selector-tag">p</span> <span class="number">42743</span></span><br></pre></td></tr></table></figure>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><blockquote>
+<p><a href="https://natapp.cn/article/tcp" target="_blank" rel="noopener">TCP型隧道使用说明以及使用技巧</a><br><a href="https://natapp.cn/article/nohup" target="_blank" rel="noopener">linux后台运行natapp(ngrok)教程</a><br><a href="https://blog.csdn.net/KevenPotter/article/details/102900912" target="_blank" rel="noopener">NATAPP安装和配置</a>  </p>
+</blockquote>
+
       
     </div>
 
@@ -516,7 +519,7 @@ U2FsdGVkX19qkP4Jy1yv2tv/RSTI9BI07HNskdNzdi1S5mW9HeB6SFSI2II3Y44KxmpWiIOVJttV0qLo
       
         <div class="post-tags">
           
-            <a href="/tags/essay/" rel="tag"># essay</a>
+            <a href="/tags/Trick/" rel="tag"># Trick</a>
           
         </div>
       
@@ -529,8 +532,8 @@ U2FsdGVkX19qkP4Jy1yv2tv/RSTI9BI07HNskdNzdi1S5mW9HeB6SFSI2II3Y44KxmpWiIOVJttV0qLo
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/06/03/hack-your-heart/" rel="next" title="Hack Your Heart">
-                <i class="fa fa-chevron-left"></i> Hack Your Heart
+              <a href="/2018/12/12/get-music-link/" rel="next" title="获取网易云音乐外链">
+                <i class="fa fa-chevron-left"></i> 获取网易云音乐外链
               </a>
             
           </div>
@@ -539,8 +542,8 @@ U2FsdGVkX19qkP4Jy1yv2tv/RSTI9BI07HNskdNzdi1S5mW9HeB6SFSI2II3Y44KxmpWiIOVJttV0qLo
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/11/05/icpc-qingdao-2017/" rel="prev" title="2017ACM-ICPC青岛——第一次现场赛">
-                2017ACM-ICPC青岛——第一次现场赛 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/12/27/intranet-penetration-by-frp/" rel="prev" title="内网穿透 by FRP">
+                内网穿透 by FRP <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -586,8 +589,17 @@ U2FsdGVkX19qkP4Jy1yv2tv/RSTI9BI07HNskdNzdi1S5mW9HeB6SFSI2II3Y44KxmpWiIOVJttV0qLo
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -724,6 +736,22 @@ U2FsdGVkX19qkP4Jy1yv2tv/RSTI9BI07HNskdNzdi1S5mW9HeB6SFSI2II3Y44KxmpWiIOVJttV0qLo
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Natapp内网穿透"><span class="nav-number">1.</span> <span class="nav-text">Natapp内网穿透</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#前期准备"><span class="nav-number">1.1.</span> <span class="nav-text">前期准备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#申请TCP隧道"><span class="nav-number">1.2.</span> <span class="nav-text">申请TCP隧道</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#具体配置"><span class="nav-number">1.3.</span> <span class="nav-text">具体配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#后台运行"><span class="nav-number">1.4.</span> <span class="nav-text">后台运行</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#远程登录"><span class="nav-number">1.5.</span> <span class="nav-text">远程登录</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Reference"><span class="nav-number">1.6.</span> <span class="nav-text">Reference</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
