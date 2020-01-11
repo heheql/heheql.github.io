@@ -116,7 +116,7 @@
 <meta property="og:description" content="记一次内网穿透实践">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://blog-1258258097.cos.ap-beijing.myqcloud.com/blogimg/FRP.png">
-<meta property="og:updated_time" content="2020-01-08T02:47:02.978Z">
+<meta property="og:updated_time" content="2020-01-11T14:35:33.565Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="内网穿透 by FRP">
 <meta name="twitter:description" content="记一次内网穿透实践">
@@ -468,7 +468,7 @@
           
           
             <div class="post-gallery-row">
-              <a class="post-gallery-img fancybox" href="https://blog-1258258097.cos.ap-beijing.myqcloud.com/blogimg/FRP.png" rel="gallery_ck54pczub000eax9kosunwj1u" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
+              <a class="post-gallery-img fancybox" href="https://blog-1258258097.cos.ap-beijing.myqcloud.com/blogimg/FRP.png" rel="gallery_ck59oztgy000fk59kgm6oi3ea" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="https://blog-1258258097.cos.ap-beijing.myqcloud.com/blogimg/FRP.png" itemprop="contentUrl">
               </a>
             
@@ -495,6 +495,9 @@
 <p><em>Tips:一般内网穿透的都是本地的服务器</em></p>
 <h2 id="配置frpc-ini文件"><a href="#配置frpc-ini文件" class="headerlink" title="配置frpc.ini文件"></a>配置frpc.ini文件</h2><p>frpc.ini文件内容为<br><figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">[common]</span></span><br><span class="line"><span class="attr">server_addr</span> = 服务器公网IP</span><br><span class="line"><span class="attr">server_port</span> = <span class="number">7000</span></span><br><span class="line"></span><br><span class="line"><span class="section">[ssh]</span></span><br><span class="line"><span class="attr">type</span> = tcp</span><br><span class="line"><span class="attr">local_ip</span> = <span class="number">127.0</span>.<span class="number">0.1</span></span><br><span class="line"><span class="attr">local_port</span> = <span class="number">22</span></span><br><span class="line"><span class="attr">remote_port</span> = <span class="number">6666</span></span><br></pre></td></tr></table></figure></p>
 <p>local_port是通过内网ssh连接本地主机时的端口<br>remort_port是设置的通过公网IP连接本地主机的端口</p>
+<p>如果要用一台公网IP服务器为两台本地主机做内网穿透，则第二台内网主机的frpc.ini文件改成下面的样子</p>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">[common]</span></span><br><span class="line"><span class="attr">server_addr</span> = 服务器公网IP</span><br><span class="line"><span class="attr">server_port</span> = <span class="number">7000</span></span><br><span class="line"></span><br><span class="line"><span class="section">[ssh1]</span> </span><br><span class="line"><span class="attr">type</span> = tcp</span><br><span class="line"><span class="attr">local_ip</span> = <span class="number">127.0</span>.<span class="number">0.1</span></span><br><span class="line"><span class="attr">local_port</span> = <span class="number">22</span></span><br><span class="line"><span class="attr">remote_port</span> = <span class="number">6667</span></span><br></pre></td></tr></table></figure>
+<p>frp是通过[ssh]这个名称来区分客户端的，第一台本地主机已经使用了[ssh]这个名称，第二台改成[ssh1]，同时remote_port也要改成未使用的端口</p>
 <h2 id="运行frpc"><a href="#运行frpc" class="headerlink" title="运行frpc"></a>运行frpc</h2><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>./frpc -c frpc.ini</span><br></pre></td></tr></table></figure>
 <p>出现下面的信息就代表运行成功了<br><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[I] [service.go:130] frps tcp listen on 0.0.0.0:7000</span><br><span class="line">[I] [root.go:207] Start frps success</span><br><span class="line">[I] [service.go:319]<span class="built_in"> client </span>login info:<span class="built_in"> ip </span>[xxxxx] version [0.30.0] hostname [] os [linux] arch [amd64]</span><br><span class="line">[I] [proxy.go:217] [7940291c148c2fca] [ssh] tcp<span class="built_in"> proxy </span>listen<span class="built_in"> port </span>[6666]</span><br><span class="line">[I] [control.go:335] [7940291c148c2fca] new<span class="built_in"> proxy </span>[ssh] success</span><br></pre></td></tr></table></figure></p>
 <p>如果希望后台运行的话<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ nohup ./frpc -c frpc<span class="selector-class">.ini</span> &amp;</span><br></pre></td></tr></table></figure></p>
